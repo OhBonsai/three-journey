@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <script src="./three.min.js"></script>
+
+    <title>Title</title>
+</head>
+<body>
+
+    <canvas id="canvas" style="border: red 2px solid"></canvas>
+
+
+<script>
+    const scene = new THREE.Scene()
+    const geo = new THREE.BoxGeometry(1, 1, 1)
+    const material = new THREE.MeshBasicMaterial({
+        color: 'red',
+    })
+    const cubeMesh = new THREE.Mesh(geo, material)
+    scene.add(cubeMesh)
+
+    const size = {
+        width: 800,
+        height: 600,
+    }
+
+    const camera = new THREE.PerspectiveCamera(75, size.width/size.height)
+    camera.position.z = 3
+    scene.add(camera)
+
+    const renderer = new THREE.WebGL1Renderer({
+        canvas: document.getElementById("canvas")
+    })
+
+
+    renderer.setSize(size.width, size.height)
+    renderer.render(scene, camera)
+</script>
+
+</body>
+</html>
