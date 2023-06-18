@@ -1,7 +1,8 @@
 body {
     margin: 0;
-    background: red;
+    /*background: red;*/
     padding: 0;
+    background: black;
 }
 
 html,
