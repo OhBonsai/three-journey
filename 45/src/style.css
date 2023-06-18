@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    background: red;
+    padding: 0;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    outline: none;
+}
